@@ -13,8 +13,8 @@ logging.basicConfig(level=logging.INFO)  # Production uchun INFO levelga o'tkazd
 CHANNEL_USERNAME = os.environ.get('CHANNEL_USERNAME', '@havolardf')
 CONTESTS_URL = os.environ.get('CONTESTS_URL', 'https://raw.githubusercontent.com/USERNAME/REPO/main/contests.json')  # Real URL bilan almashtiring
 BOT_TOKEN = os.environ.get('BOT_TOKEN', '7897761159:AAFkmR8-RKnHD1kn2p-Va7ZSjaC5uyeBcps')
-WEBHOOK_URL = os.environ.get('WEBHOOK_URL', "https://havolalardfbot.onrender.com")  # Masalan: 'https://your-app-name.herokuapp.com/webhook' – deployment da o'rnating
-PORT = int(os.environ.get('PORT', 5000))  # Heroku uchun PORT env var
+WEBHOOK_URL = os.environ.get('WEBHOOK_URL', "127.0.0.1:443/webhook")  # Masalan: 'https://your-app-name.herokuapp.com/webhook' – deployment da o'rnating
+PORT = int(os.environ.get('PORT', 443))  # Heroku uchun PORT env var
 
 if not WEBHOOK_URL:
     raise ValueError("WEBHOOK_URL environment variable not set! Deployment uchun kerak.")
